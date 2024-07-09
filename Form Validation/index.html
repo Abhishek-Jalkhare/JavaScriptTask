@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="font-['gilroy'] h-screen w-full flex items-center justify-center"
+  >
+    <form action="" class="w-1/4 h-1/2 bg-blue-400 py-[5%] px-[20px] flex flex-col justify-between rounded-xl ">
+      <div class="username"> 
+        <label for="username" class="text-xl font-semibold">Username</label>
+        <input
+          type="text"
+          id="username"
+          class="ml-[20px] p-[7px] rounded-xl border-none"
+        />
+      </div>
+      <div class="email">
+        <label for="email" class="text-xl font-semibold ml-[40px]">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="ml-[20px] p-[7px] rounded-xl border-none"
+        />
+      </div>
+      <div class="password">
+        <label for="password" class="text-xl font-semibold">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="ml-[20px] p-[7px] rounded-xl border-none"
+        />
+      </div>
+      <div class="button w-full flex items-center justify-center mt-[20px]">
+        <button class=" px-[10px] py-[7px] bg-green-500 rounded-full">submit</button>
+      </div>
+    </form>
+    <div class="overlay absolute top-0 left-0 bgoverlay h-screen w-full py-[40px] flex justify-center z-[1] hidden ">
+    </div>
+    <div class="submit top-[40px]  h-[250px] w-[400px]  bg-white absolute z-[3] flex flex-col gap-[25px] items-center justify-center rounded-xl hidden">
+        <h1 class="text-3xl font-semibold text-green-500" >Form submited</h1>
+        <button class="bg-red-600 px-[10px] py-[7px] rounded-xl text-white">close</button>
+    </div>
+    <div class="error top-[40px]   w-[400px]  bg-white absolute z-[3]  rounded-xl px-[20px] py-[20px] hidden ">
+      <h1 class="text-3xl text-red-500 font-semibold text-center mb-[20px]" >Form Not Submitted !</h1> 
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
