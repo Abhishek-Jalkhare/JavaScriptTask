@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black h-screen w-full flex items-center justify-center font-['gilroy'] text-xl">
+    <form action="" class="">
+      <div class="input flex gap-[50px]">
+        <div class="hours flex gap-[20px]">
+          <label for="hours">Hours</label>
+          <input type="text" id="hours" class="text-black" />
+        </div>
+        <div class="min flex gap-[20px]">
+          <label for="min">Minutes</label>
+          <input type="text" id="min" />
+        </div>
+        <div class="sec flex gap-[20px]">
+          <label for="sec">Seconds</label>
+          <input type="text" id="sec" />
+        </div>
+      </div>
+      
+      <div class="butt w-full flex my-[50px] items-center justify-center"><button class="px-[20px] py-[10px] bg-white text-black rounded-full ">Start</button></div>
+    </form>
+    <div class="timer absolute h-screen w-full bg-black flex items-center justify-center gap-[40px] z-[1] hidden">
+       <div class="hours"> <h1 class="w-20px text-center text-xl text-white mb-[10px]">Hours</h1>
+        <div class="rh w-[80px] h-[80px] bg-white rounded-xl flex items-center justify-center text-4xl ">2</div></div>
+        <div class="min"> <h1 class="w-20px text-center text-xl text-white mb-[10px]">Minutes</h1>
+            <div class="rm w-[80px] h-[80px] bg-white rounded-xl flex items-center justify-center text-4xl ">12</div></div>
+            <div class="sec"> <h1 class="w-20px text-center text-xl text-white mb-[10px]">Seconds</h1>
+                <div class="rs w-[80px] h-[80px] bg-white rounded-xl flex items-center justify-center text-4xl  ">35</div></div>
+    </div>
+    <div class="overlay bg-black h-screen w-full opacity-80 absolute z-[2] hidden"></div>
+    <div class="timesup absolute z-[3] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-5xl text-black bg-white h-[200px] w-[300px] flex items-center justify-center font-semibold rounded-lg hidden">
+        Times Up
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
