@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+</head>
+<body class="font-['gilroy'] bg-black h-screen w-full ">
+    <div class=" absolute nav text-white flex items-center bg-black justify-center w-full py-[40px]  text-3xl font-semibold fixed top-[0] ">DYNAMIC LIST</div>
+    <div class="containers w-full h-full flex items-center">
+        <div class="add w-[50%] h-full flex items-center justify-center  gap-[50px]">
+            <button class="Addele px-[10px] py-[9px] bg-white rounded-xl text-2xl font-semibold border-[2px] border-white"> Add Element </button>
+            <input type="text" class="  py-[9px] rounded-lg text-center border-none w-[200px] bg-white text-xl text-black font-medium" id="newelement">
+        </div>
+        <div class="list w-[50%] h-full flex flex-col items-center justify-center b gap-[20px]">
+            <h1 class="text-4xl font-semibold text-white tracking-wider" >List</h1>
+            <ul class="flex flex-col gap-[5px]">
+                <div class="item flex gap-[10px]" ><li class="text-2xl w-[400px] bg-white text-center py-[5px] rounded-lg font-medium">Empty</li>
+                    </div>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
