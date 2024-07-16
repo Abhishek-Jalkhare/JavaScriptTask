@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black text-white">
+    <div
+      class="main h-screen w-full flex flex-col items-center justify-center gap-[50px]"
+    >
+      <h1 class="text-[50px] font-semibold">Take A Quiz</h1>
+      <button
+        class="start text-[30px] py-[15px] px-[30px] font-[300] tracking-wider border-[2px] text-[#2E7BAE] border-[#2E7BAE] hover:bg-[#2E7BAE] hover:text-white hover:transition hover:font-[400]"
+      >
+        START
+      </button>
+    </div>
+    <div
+      class="quiz absolute top-0 left-0 bg-black h-screen w-full flex flex-col items-center justify-center gap-[30px] z-[1] hidden"
+    >
+      <h1 class="que font-semibold text-[32px]">question</h1>
+      <div class="options w-[60%] flex flex-col gap-[20px]">
+        <button
+          class="options text-center w-full h-[60px] border-[1px] border-white text-white text-[22px] hover:bg-white hover:text-black hover:transition"
+        >
+          option 1
+        </button>
+        <button
+          class="options text-center w-full h-[60px] border-[1px] border-white text-white text-[22px] hover:bg-white hover:text-black hover:transition"
+        >
+          option 1
+        </button>
+        <button
+          class="options text-center w-full h-[60px] border-[1px] border-white text-white text-[22px] hover:bg-white hover:text-black hover:transition"
+        >
+          option 1
+        </button>
+        <button
+          class="options text-center w-full h-[60px] border-[1px] border-white text-white text-[22px] hover:bg-white hover:text-black hover:transition"
+        >
+          option 1
+        </button>
+      </div>
+      <div class="line w-[60%] border border-white h-[15px] mt-[10px]">
+        <div class="progress bg-[#2E7BAE] h-full " style="width: 0"></div>
+      </div>
+    </div>
+    <div
+      class="result h-auto w-full bg-black flex items-center justify-center absolute z-[2] top-0 left-0 flex-col gap-[50px]  pt-[150px] hidden " 
+    >        
+    <!-- h-auto isliye likha kyuki jb script se code inject kr rhe hai solutions se toh apna result wagera upar khisak jaa raha hai -->
+      <h1 class="text-[50px] font-semibold text-white">Results</h1>
+      <div
+        class="review flex w-full items-center justify-between px-[100px] text-[50px] font-semibold text-white gap-[200px] "
+      >
+        <h1 class="marksscored">Marks : 4 / 10</h1>
+        <h1 class="grade ">Grade : A+</h1>
+      </div>
+      <div class="solution flex flex-col justify-start w-[60%]">
+        <h1
+          class="text-[50px] w-full text-center font-semibold text-white mb-[40px]"
+        >
+          Solution
+        </h1>
+        <div class="ques flex flex-col gap-[80px] w-full">
+            
+            
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
