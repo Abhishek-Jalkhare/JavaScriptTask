@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic List</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-['gilroy'] bg-black h-screen w-full ">
-    <div class=" absolute nav text-white flex items-center bg-black justify-center w-full py-[40px]  text-3xl font-semibold fixed top-[0] ">DYNAMIC LIST</div>
-    <div class="containers w-full h-full flex items-center">
-        <div class="add w-[50%] h-full flex items-center justify-center  gap-[50px]">
-            <button class="Addele px-[10px] py-[9px] bg-white rounded-xl text-2xl font-semibold border-[2px] border-white"> Add Element </button>
-            <input type="text" class="  py-[9px] rounded-lg text-center border-none w-[200px] bg-white text-xl text-black font-medium" id="newelement">
+<body class="font-['Poppins'] bg-gradient-to-br from-gray-900 to-black h-screen w-full overflow-hidden">
+    <div class="nav text-white flex items-center justify-center w-full py-[30px] text-4xl font-bold fixed top-0 bg-opacity-80 backdrop-blur-md z-10">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">DYNAMIC LIST</span>
+    </div>
+    
+    <div class="containers w-full h-full flex items-center pt-[100px]">
+        <div class="add w-[50%] h-full flex flex-col items-center justify-center gap-[30px]">
+            <div class="flex flex-col gap-[20px] items-center">
+                <input type="text" class="py-[12px] px-[20px] rounded-xl text-center border-2 border-blue-500/30 w-[300px] bg-gray-800/50 text-xl text-white font-medium focus:outline-none focus:border-blue-500 transition-all" id="newelement" placeholder="Enter item...">
+                <button class="Addele px-[30px] py-[12px] bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl text-xl font-semibold text-white hover:shadow-lg hover:shadow-blue-500/30 transition-all transform hover:scale-105">
+                    Add Element
+                </button>
+            </div>
         </div>
-        <div class="list w-[50%] h-full flex flex-col items-center justify-center b gap-[20px]">
-            <h1 class="text-4xl font-semibold text-white tracking-wider" >List</h1>
-            <ul class="flex flex-col gap-[5px]">
-                <div class="item flex gap-[10px]" ><li class="text-2xl w-[400px] bg-white text-center py-[5px] rounded-lg font-medium">Empty</li>
+        
+        <div class="list w-[50%] h-full flex flex-col items-center justify-start pt-[50px] gap-[30px]">
+            <h1 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">List</h1>
+            <div class="max-h-[60vh] overflow-y-auto custom-scrollbar">
+                <ul class="flex flex-col gap-[10px] p-[20px]">
+                    <div class="item flex gap-[15px] items-center">
+                        <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-gray-300 border-2 border-blue-500/30">Empty</li>
                     </div>
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

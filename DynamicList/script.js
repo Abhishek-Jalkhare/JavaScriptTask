@@ -5,7 +5,7 @@ i = 0;
 var addele = document.querySelector(".Addele");
 addele.addEventListener("click", function () {
   if (input.value.trim() != "") {
-    arr.push(input.value)  ;
+    arr.push(input.value);
     input.value = "";
     display();
   }
@@ -22,18 +22,23 @@ li.addEventListener("click", function (e) {
 function display() {
   li.innerHTML = "";
   if (arr.length === 0) {
-    li.innerHTML = `<div class="item flex gap-[10px]"><li class="text-2xl w-[400px] bg-white text-center py-[5px] rounded-lg font-medium">Empty</li>
-                   `;
+    li.innerHTML = `<div class="item flex gap-[15px] items-center">
+                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-gray-300 border-2 border-blue-500/30">Empty</li>
+                   </div>`;
     return;
   }
   if (arr.length == 1) {
-    li.innerHTML = `<div class="item flex gap-[10px]"><li class="text-2xl w-[400px] bg-white text-center py-[5px] rounded-lg font-medium">${arr[0]}</li>
-  <i class="delete ri-delete-bin-7-line text-3xl text-white" id ="0"></i></div>`;
+    li.innerHTML = `<div class="item flex gap-[15px] items-center">
+                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-gray-300 border-2 border-blue-500/30">${arr[0]}</li>
+                      <i class="delete ri-delete-bin-7-line text-3xl text-white hover:text-red-500 transition-colors cursor-pointer" id="0"></i>
+                   </div>`;
     return;
   }
 
   arr.forEach(function (ele, i) {
-    li.innerHTML += ` <div class="item flex gap-[10px]"><li class="text-2xl w-[400px] bg-white text-center py-[5px] rounded-lg font-medium">${ele}</li>
-                    <i class="delete ri-delete-bin-7-line text-3xl text-white" id="${i}"></i></div>`;
+    li.innerHTML += `<div class="item flex gap-[15px] items-center">
+                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-gray-300 border-2 border-blue-500/30">${ele}</li>
+                      <i class="delete ri-delete-bin-7-line text-3xl text-white hover:text-red-500 transition-colors cursor-pointer" id="${i}"></i>
+                    </div>`;
   });
 }
