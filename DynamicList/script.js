@@ -23,22 +23,22 @@ function display() {
   li.innerHTML = "";
   if (arr.length === 0) {
     li.innerHTML = `<div class="item flex gap-[15px] items-center">
-                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-gray-300 border-2 border-blue-500/30">Empty</li>
+                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-gray-300 border-2 border-blue-500/30 hover:border-blue-500 transition-all">Your list is empty!</li>
                    </div>`;
     return;
   }
   if (arr.length == 1) {
-    li.innerHTML = `<div class="item flex gap-[15px] items-center">
-                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-gray-300 border-2 border-blue-500/30">${arr[0]}</li>
-                      <i class="delete ri-delete-bin-7-line text-3xl text-white hover:text-red-500 transition-colors cursor-pointer" id="0"></i>
+    li.innerHTML = `<div class="item flex gap-[15px] items-center group">
+                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-white border-2 border-blue-500/30 hover:border-blue-500 transition-all shadow-md hover:shadow-blue-500/20">${arr[0]}</li>
+                      <i class="delete ri-delete-bin-7-line text-3xl text-gray-400 group-hover:text-red-500 transition-colors cursor-pointer" id="0"></i>
                    </div>`;
     return;
   }
 
   arr.forEach(function (ele, i) {
-    li.innerHTML += `<div class="item flex gap-[15px] items-center">
-                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-gray-300 border-2 border-blue-500/30">${ele}</li>
-                      <i class="delete ri-delete-bin-7-line text-3xl text-white hover:text-red-500 transition-colors cursor-pointer" id="${i}"></i>
+    li.innerHTML += `<div class="item flex gap-[15px] items-center group transform hover:scale-[1.02] transition-all">
+                      <li class="text-xl w-[400px] bg-gray-800/50 text-center py-[12px] rounded-xl font-medium text-white border-2 border-blue-500/30 hover:border-blue-500 transition-all shadow-md hover:shadow-blue-500/20">${ele}</li>
+                      <i class="delete ri-delete-bin-7-line text-3xl text-gray-400 group-hover:text-red-500 transition-colors cursor-pointer" id="${i}"></i>
                     </div>`;
   });
 }

@@ -3,67 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fun Form Validation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body
-    class="font-['gilroy'] h-screen w-full flex items-center justify-center"
+    class="font-['Comic_Neue'] h-screen w-full flex items-center justify-center bg-gradient-to-br from-purple-400 via-pink-300 to-blue-300"
   >
     <form
       action=""
-      class="w-1/4 h-1/2 bg-blue-400 py-[5%] px-[20px] flex flex-col justify-between rounded-xl"
+      class="w-1/3 h-auto bg-white py-[5%] px-[30px] flex flex-col gap-6 rounded-3xl shadow-2xl border-4 border-blue-400 transform hover:scale-105 transition-transform duration-300"
     >
-      <div class="username">
-        <label for="username" class="text-xl font-semibold">Username</label>
+      <h1 class="text-3xl font-bold text-center text-blue-500 mb-4"> Form</h1>
+      
+      <div class="username bg-blue-100 p-4 rounded-2xl hover:bg-blue-200 transition-colors">
+        <label for="username" class="text-xl font-bold text-blue-600">👤 Username</label>
         <input
           type="text"
           id="username"
-          class="ml-[20px] p-[7px] rounded-xl border-none"
+          class="ml-[20px] p-[10px] rounded-xl border-2 border-blue-300 focus:border-blue-500 focus:outline-none w-2/3 hover:shadow-md transition-all"
         />
       </div>
-      <div class="email">
-        <label for="email" class="text-xl font-semibold ml-[40px]">Email</label>
+      
+      <div class="email bg-pink-100 p-4 rounded-2xl hover:bg-pink-200 transition-colors">
+        <label for="email" class="text-xl font-bold text-pink-600">✉️ Email</label>
         <input
           type="email"
           id="email"
-          class="ml-[20px] p-[7px] rounded-xl border-none"
+          class="ml-[20px] p-[10px] rounded-xl border-2 border-pink-300 focus:border-pink-500 focus:outline-none w-2/3 hover:shadow-md transition-all"
         />
       </div>
-      <div class="password">
-        <label for="password" class="text-xl font-semibold">Password</label>
-        <input
-          type="password"
-          id="password"
-          class="ml-[20px] p-[7px] rounded-xl border-none"
-        />
+      <div class="password bg-purple-100 p-4 rounded-2xl hover:bg-purple-200 transition-colors">
+        <label for="password" class="text-xl font-bold text-purple-600">🔒 Password</label>
+        <div class="flex items-center">
+          <input
+            type="password"
+            id="password"
+            class="ml-[20px] p-[10px] rounded-xl border-2 border-purple-300 focus:border-purple-500 focus:outline-none w-2/3 hover:shadow-md transition-all"
+          />
+          <button type="button" class="ml-2 p-2 text-purple-600 hover:text-purple-800 transition-colors" onclick="togglePasswordVisibility()">
+            <span id="eyeIcon">👁️</span>
+          </button>
+        </div>
       </div>
+      <script>
+        function togglePasswordVisibility() {
+          const passwordInput = document.getElementById('password');
+          const eyeIcon = document.getElementById('eyeIcon');
+          
+          if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.textContent = '👁️‍🗨️';
+          } else {
+            passwordInput.type = 'password';
+            eyeIcon.textContent = '👁️';
+          }
+        }
+      </script>
+      
       <div class="button w-full flex items-center justify-center mt-[20px]">
-        <button class="px-[10px] py-[7px] bg-green-500 rounded-full">
-          submit
+        <button class="px-[20px] py-[10px] bg-gradient-to-r from-green-400 to-blue-400 text-white font-bold rounded-full hover:from-green-500 hover:to-blue-500 transform hover:scale-110 transition-all duration-300 shadow-lg text-lg">
+          🚀 Submit!
         </button>
       </div>
     </form>
+    
     <div
-      class="overlay absolute top-0 left-0 bgoverlay h-screen w-full py-[40px] flex justify-center z-[1] hidden"
+      class="overlay absolute top-0 left-0 bgoverlay h-screen w-full py-[40px] flex justify-center z-[1] hidden backdrop-blur-sm"
     ></div>
+    
     <div
-      class="submit top-[40px] h-[250px] w-[400px] bg-white absolute z-[3] flex flex-col gap-[25px] items-center justify-center rounded-xl hidden"
+      class="submit top-[40px] h-[300px] w-[450px] bg-white absolute z-[3] flex flex-col gap-[25px] items-center justify-center rounded-3xl hidden border-4 border-green-400 shadow-2xl transform scale-110"
     >
-      <h1 class="text-3xl font-semibold text-green-500">Form submited</h1>
-      <button class="bg-red-600 px-[10px] py-[7px] rounded-xl text-white">
-        close
+      <div class="text-6xl">🎉</div>
+      <h1 class="text-3xl font-bold text-green-500 text-center">Woohoo! Form Submitted!</h1>
+      <button class="bg-gradient-to-r from-red-400 to-pink-500 px-[20px] py-[10px] rounded-full text-white font-bold hover:from-red-500 hover:to-pink-600 transform hover:scale-110 transition-all duration-300 shadow-lg">
+        Close ×
       </button>
     </div>
+    
     <div
-      class="error top-[40px] w-[400px] bg-white absolute z-[3] rounded-xl px-[20px] py-[20px] hidden"
+      class="error top-[40px] w-[450px] bg-white absolute z-[3] rounded-3xl px-[30px] py-[30px] hidden border-4 border-red-400 shadow-2xl"
     >
-      <h1 class="text-3xl text-red-500 font-semibold text-center mb-[20px]">
-        Form Not Submitted !
+      <div class="text-6xl text-center mb-4">😕</div>
+      <h1 class="text-3xl text-red-500 font-bold text-center mb-[20px]">
+        Oops! Form Not Submitted!
       </h1>
     </div>
     <script src="script.js"></script>
